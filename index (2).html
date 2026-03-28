@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ROBOCON HELMETS — Engineered for Protection</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23000' /><text x='50' y='58' font-size='44' fill='%2300e6ff' font-family='Inter,system-ui' text-anchor='middle'>R</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <!-- LOADER / WOW INTRO -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="logo-plate">
+        <div class="logo-r">R</div>
+        <div class="logo-text">ROBOCON</div>
+      </div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="index.html" class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00e6ff"/><stop offset="1" stop-color="#5f87ff"/></linearGradient></defs>
+            <rect x="6" y="12" width="88" height="76" rx="18" fill="#0b0b0b" stroke="url(#g)" stroke-width="4"/>
+            <text x="50" y="62" font-size="46" fill="white" font-family="Inter,system-ui" text-anchor="middle">R</text>
+          </svg>
+        </div>
+        <div class="brand-name">ROBOCON HELMETS</div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-btn" id="cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6h15l-1.5 9h-12L4 2H2" stroke="#cfd8ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+        <button class="cta" onclick="location.href='checkout.html'">Buy Now</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <h1 class="hero-title">Engineered for Protection. Designed for Power.</h1>
+          <p class="hero-sub">ROBOCON merges aerospace-grade safety with minimalist design for riders who demand performance and prestige.</p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="products.html">Explore Helmets</a>
+            <a class="btn-ghost" href="#story">Our Story</a>
+          </div>
+
+          <div class="floating-highlights">
+            <div class="float-card">Carbon Fiber Shell</div>
+            <div class="float-card">Aero-Flow Venting</div>
+            <div class="float-card neon">Active Impact Shield</div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- Cinematic CSS/SVG Helmet -->
+          <div class="helmet-stage" id="helmet-stage">
+            <div class="helmet" id="helmet">
+              <!-- layered SVG shapes to create 3D illusion -->
+              <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" class="helmet-svg">
+                <defs>
+                  <radialGradient id="metal" cx="30%" cy="30%">
+                    <stop offset="0%" stop-color="#bfc9ff"/>
+                    <stop offset="40%" stop-color="#7b84ff"/>
+                    <stop offset="100%" stop-color="#111317"/>
+                  </radialGradient>
+                  <linearGradient id="shine" x1="0" x2="1">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0.35)"/>
+                    <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                  </linearGradient>
+                  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="10" result="blur"/>
+                    <feBlend in="SourceGraphic" in2="blur"/>
+                  </filter>
+                </defs>
+
+                <!-- back shell -->
+                <ellipse cx="400" cy="330" rx="260" ry="180" fill="url(#metal)" opacity="0.95" transform="rotate(-8 400 330)"/>
+                <!-- visor shadow -->
+                <path d="M170 300 C260 190, 540 170, 630 300 L630 360 C540 240, 260 240, 170 360 Z" fill="rgba(0,0,0,0.45)"/>
+                <!-- visor -->
+                <path d="M180 285 C260 200, 540 190, 620 285 C600 240, 420 220, 320 260 C280 275, 220 290, 180 285 Z" fill="#0b1220" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+                <!-- reflective sheen -->
+                <path d="M200 240 C290 170, 510 165, 590 240" stroke="url(#shine)" stroke-width="36" stroke-linecap="round" fill="none" opacity="0.8" />
+                <!-- neon accent -->
+                <path d="M160 360 C260 280, 540 280, 640 360" stroke="#00e6ff" stroke-width="4" stroke-linecap="round" stroke-opacity="0.14" />
+                <!-- subtle vents -->
+                <g fill="#0b0d10" opacity="0.7">
+                  <rect x="340" y="380" width="12" height="32" rx="4" transform="skewX(-12)"/>
+                  <rect x="375" y="375" width="12" height="32" rx="4" transform="skewX(-12)"/>
+                  <rect x="410" y="370" width="12" height="32" rx="4" transform="skewX(-12)"/>
+                </g>
+                <!-- foreground rim -->
+                <path d="M150 400 C270 460, 530 460, 650 400 L650 420 C530 480, 270 480, 150 420 Z" fill="#0b0b0b" opacity="0.95" />
+              </svg>
+
+              <!-- floating light -->
+              <div class="helmet-light"></div>
+            </div>
+
+            <!-- subtle parallax layers -->
+            <div class="stage-bg">
+              <div class="bg-ring ring-1"></div>
+              <div class="bg-ring ring-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="mouse">
+          <div class="mouse-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY / SCROLLING SECTIONS -->
+    <section id="story" class="story container">
+      <div class="story-row">
+        <div class="story-panel">
+          <h2>Precision-engineered Safety</h2>
+          <p>Our composite shells undergo aerospace-grade molding and multi-axis impact testing. We build helmets that protect — and look commanding while doing it.</p>
+        </div>
+        <div class="story-visual" data-parallax="0.08">
+          <div class="floating-visual metal-card">Monocoque Carbon</div>
+        </div>
+      </div>
+
+      <div class="story-row reverse">
+        <div class="story-panel">
+          <h2>Minimal. Futuristic. Powerful.</h2>
+          <p>Design language inspired by modern spacecraft: clean surfaces, purposeful cut lines, and subtle light accents in electric blue.</p>
+        </div>
+        <div class="story-visual" data-parallax="0.06">
+          <div class="floating-visual neon-card">AeroFlow Vents</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT TEASER -->
+    <section class="products-teaser">
+      <div class="container">
+        <h3>Featured Models</h3>
+        <div class="product-grid" id="featured-grid">
+          <!-- product cards inserted by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews container">
+      <h3>Riders Speak — Premium Feed</h3>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"The fit is surgical. The vents work, and the finish is immaculate. I feel like piloting a cruiser from the future."</p>
+          <div class="author">— Arjun, Mumbai</div>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Limited drop felt exclusive. Compliments everywhere. Safety tech is top notch."</p>
+          <div class="author">— Priya, Delhi</div>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Lightweight and solid. The visor has great clarity and anti-fog works like a charm."</p>
+          <div class="author">— Rohit, Bengaluru</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <section class="footer-cta">
+      <div class="container">
+        <h4>Ride Bold. Ride Protected.</h4>
+        <a class="btn-primary" href="products.html">Discover the Collection</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div>© <span id="year"></span> ROBOCON HELMETS — All rights reserved</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html" onclick="alert('Local demo: privacy placeholder')">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

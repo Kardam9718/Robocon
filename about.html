@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — ROBOCON HELMETS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><div class="brand-mark">R</div><div class="brand-name">ROBOCON HELMETS</div></a>
+    </nav>
+  </header>
+
+  <main class="container about-page">
+    <section class="brand-story">
+      <h1>Our Mission</h1>
+      <p>ROBOCON was founded to rethink protective gear for riders who want the best of two worlds: uncompromising safety and forward-thinking luxury design.</p>
+      <div class="founder">
+        <div class="founder-photo" aria-hidden="true"></div>
+        <div class="founder-bio">
+          <h3>Founder — Arjun Rao</h3>
+          <p>Ex-aerospace engineer turned designer. Arjun's vision is to integrate structural safety and clean, futuristic aesthetics — yielding helmets that perform like safety equipment and present like a collector's piece.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <h2>Design Principles</h2>
+      <ul>
+        <li>Structural integrity over trends</li>
+        <li>Minimalism that speaks power</li>
+        <li>Continuous R&D & limited drops</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div>© <span id="year6"></span> ROBOCON HELMETS</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[id^=year]').forEach(e => e.textContent = new Date().getFullYear());
+  </script>
+</body>
+</html>

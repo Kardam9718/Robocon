@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — ROBOCON HELMETS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><div class="brand-mark">R</div><div class="brand-name">ROBOCON HELMETS</div></a>
+    </nav>
+  </header>
+
+  <main class="container checkout-page">
+    <h1>Secure Checkout</h1>
+
+    <div class="checkout-grid">
+      <section class="checkout-left">
+        <form id="checkout-form" onsubmit="return false;">
+          <label>Full name<input id="name" required placeholder="Name"></label>
+          <label>Email<input id="email" type="email" required placeholder="you@domain.com"></label>
+          <label>Phone<input id="phone" required placeholder="+91 9XXXXXXXXX"></label>
+          <label>Address<textarea id="address" rows="3" placeholder="City, Street, Landmark"></textarea></label>
+          <div class="pay-note muted">Payments processed via Razorpay (test mode). Replace the test key in js/checkout.js with your own when going live.</div>
+          <div class="checkout-actions">
+            <button class="btn-primary" id="pay-btn">Pay Now</button>
+            <button class="btn-ghost" onclick="location.href='products.html'">Continue Shopping</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="checkout-right" id="order-summary">
+        <!-- summary -->
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <div>© <span id="year5"></span> ROBOCON HELMETS</div>
+  </footer>
+
+  <!-- Razorpay checkout script (client-side) -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Checkout.init();
+    });
+  </script>
+</body>
+</html>

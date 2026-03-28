@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — ROBOCON HELMETS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><div class="brand-mark">R</div><div class="brand-name">ROBOCON HELMETS</div></a>
+      <ul class="nav-links">
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-btn" id="cart-link">Cart <span class="cart-count" id="cart-count-2">0</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="catalog-header">
+      <div>
+        <h1>Helmets Collection</h1>
+        <p class="muted">Full Face • Modular • Half Face — handcrafted, limited drops</p>
+      </div>
+
+      <div class="filters">
+        <label>
+          <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="fullface">Full Face</option>
+            <option value="modular">Modular</option>
+            <option value="half">Half Face</option>
+          </select>
+        </label>
+        <label>
+          <input type="search" id="search" placeholder="Search model..." />
+        </label>
+      </div>
+    </section>
+
+    <section class="product-list" id="product-list">
+      <!-- cards injected by products.js -->
+    </section>
+  </main>
+
+  <div id="quick-view" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="ui.closeModal('quick-view')">✕</button>
+      <div id="quick-view-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer container">
+    <div>© <span id="year2"></span> ROBOCON HELMETS</div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    // page specific
+    document.addEventListener('DOMContentLoaded', () => {
+      Products.renderList(document.getElementById('product-list'));
+      Products.setupFilters();
+      ui.bindModal('quick-view');
+      updateCartCount();
+    });
+
+    function updateCartCount(){
+      const c = Cart.count();
+      document.getElementById('cart-count-2').textContent = c;
+    }
+  </script>
+</body>
+</html>

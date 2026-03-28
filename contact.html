@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — ROBOCON HELMETS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><div class="brand-mark">R</div><div class="brand-name">ROBOCON HELMETS</div></a>
+    </nav>
+  </header>
+
+  <main class="container contact-page">
+    <h1>Get in touch</h1>
+    <p class="muted">For partnership or support, drop us a message.</p>
+
+    <form id="contact-form" onsubmit="submitContact(event)">
+      <label>Name<input id="c-name" required placeholder="Name"></label>
+      <label>Email<input id="c-email" type="email" required placeholder="you@domain.com"></label>
+      <label>Message<textarea id="c-message" rows="4" required></textarea></label>
+      <div class="contact-actions">
+        <button class="btn-primary" type="submit">Send Message</button>
+        <button class="btn-ghost" type="button" onclick="document.getElementById('contact-form').reset();">Reset</button>
+      </div>
+      <div id="contact-feedback" class="muted"></div>
+    </form>
+
+  </main>
+
+  <footer class="site-footer container">
+    <div>© <span id="year7"></span> ROBOCON HELMETS</div>
+  </footer>
+
+  <script>
+    function submitContact(e){
+      e.preventDefault();
+      const name = document.getElementById('c-name').value;
+      document.getElementById('contact-feedback').textContent = `Thank you, ${name}. This is a demo contact form (frontend-only).`;
+      document.getElementById('contact-form').reset();
+    }
+    document.querySelectorAll('[id^=year]').forEach(e => e.textContent = new Date().getFullYear());
+  </script>
+</body>
+</html>

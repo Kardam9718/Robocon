@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product — ROBOCON HELMETS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><div class="brand-mark">R</div><div class="brand-name">ROBOCON HELMETS</div></a>
+      <ul class="nav-links">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-btn" id="cart-link-3">Cart <span class="cart-count" id="cart-count-3">0</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container product-detail">
+    <div id="product-root">
+      <!-- dynamic -->
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <div>© <span id="year3"></span> ROBOCON HELMETS</div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // read id from querystring
+      const params = new URLSearchParams(location.search);
+      const id = params.get('id') || 'rb-ff-01';
+      const el = document.getElementById('product-root');
+      const product = Products.getById(id);
+      if(!product){
+        el.innerHTML = '<div class="empty">Product not found</div>';
+        return;
+      }
+
+      el.innerHTML = `
+        <div class="detail-grid">
+          <div class="gallery">
+            <div class="gallery-view" id="gallery-view">
+              ${Products.renderGalleryMarkup(product)}
+            </div>
+            <div class="gallery-thumbs">${Products.renderThumbs(product)}</div>
+          </div>
+
+          <aside class="detail-info">
+            <h1>${product.title}</h1>
+            <div class="muted">${product.category} • ${product.material}</div>
+            <p class="price">₹ ${product.price.toLocaleString()}</p>
+            <div class="features">
+              ${Products.renderFeatureList(product)}
+            </div>
+
+            <div class="detail-actions">
+              <label class="qty">Qty <input id="qty" type="number" value="1" min="1" max="5" /></label>
+              <button class="btn-primary" id="add-to-cart">Add to Cart</button>
+              <button class="btn-ghost" id="buy-now">Buy Now</button>
+              <div class="stock-note" id="stock-note">${product.stock>0 ? 'In stock' : 'Sold out'}</div>
+            </div>
+          </aside>
+        </div>
+      `;
+
+      // gallery interactions
+      Products.bindGalleryInteractions('gallery-view');
+
+      document.getElementById('add-to-cart').addEventListener('click', () => {
+        const qty = Number(document.getElementById('qty').value || 1);
+        Cart.add(product.id, qty);
+        ui.toast('Added to cart');
+        updateCount();
+      });
+
+      document.getElementById('buy-now').addEventListener('click', () => {
+        Cart.set([{ id: product.id, qty: Number(document.getElementById('qty').value || 1) }]);
+        location.href = 'checkout.html';
+      });
+
+      function updateCount(){
+        document.getElementById('cart-count-3').textContent = Cart.count();
+      }
+      updateCount();
+    });
+  </script>
+</body>
+</html>

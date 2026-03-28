@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cart — ROBOCON HELMETS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><div class="brand-mark">R</div><div class="brand-name">ROBOCON HELMETS</div></a>
+      <ul class="nav-links">
+        <li><a href="products.html">Products</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="checkout.html" class="cta">Checkout</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container cart-page">
+    <h1>Your Cart</h1>
+    <div id="cart-area"></div>
+    <div class="cart-footer" id="cart-footer"></div>
+  </main>
+
+  <footer class="site-footer container">
+    <div>© <span id="year4"></span> ROBOCON HELMETS</div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    function renderCart(){
+      const items = Cart.itemsDetailed();
+      const area = document.getElementById('cart-area');
+      const footer = document.getElementById('cart-footer');
+      if(items.length===0){
+        area.innerHTML = '<div class="empty">Your cart is empty. <a href="products.html">Browse helmets</a></div>';
+        footer.innerHTML = '';
+        return;
+      }
+      area.innerHTML = items.map(it => `
+        <div class="cart-row" data-id="${it.id}">
+          <div class="cart-thumb">${Products.cardImage(it.product)}</div>
+          <div class="cart-meta">
+            <div class="cart-title">${it.product.title}</div>
+            <div class="muted">${it.product.category} • ₹${it.product.price.toLocaleString()}</div>
+            <div class="cart-controls">
+              <button class="qty-btn" onclick="Cart.decrement('${it.id}');renderCart();">−</button>
+              <input class="qty-input" value="${it.qty}" onchange="Cart.setQty('${it.id}', this.value);renderCart();" />
+              <button class="qty-btn" onclick="Cart.increment('${it.id}');renderCart();">+</button>
+              <button class="remove" onclick="Cart.remove('${it.id}');renderCart();">Remove</button>
+            </div>
+          </div>
+          <div class="cart-price">₹ ${(it.total).toLocaleString()}</div>
+        </div>
+      `).join('');
+
+      footer.innerHTML = `
+        <div class="cart-summary">
+          <div>Items: ${Cart.count()}</div>
+          <div>Total: ₹ ${Cart.total().toLocaleString()}</div>
+          <div class="cart-actions">
+            <button class="btn-ghost" onclick="Cart.clear();renderCart();">Clear</button>
+            <button class="btn-primary" onclick="location.href='checkout.html'">Proceed to Pay</button>
+          </div>
+        </div>
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCart();
+    });
+  </script>
+</body>
+</html>
