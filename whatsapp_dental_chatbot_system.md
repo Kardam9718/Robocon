@@ -113,7 +113,7 @@ Tab tak, apni problem describe karke chod dein — hum jaldi se jaldi respond ka
 | `/book` | Appointment book karne ke liye yeh form fill karein 👇\n🔗 [FORM LINK]\nForm fill hote hi hum confirm karenge! ✅ |
 | `/price` | Hamare popular treatments ki approximate price:\n🦷 Cleaning: ₹500–800\n🔧 Filling: ₹800–1500\n👑 Crown: ₹4000–8000\n🏥 RCT: ₹3000–6000\n😁 Braces: ₹15,000 se shuru\n\nExact price ke liye appointment lein. |
 | `/address` | 📍 Hum yahan hain:\n[Full Address]\n\n🗺️ Google Maps: [Maps Link]\n⏰ Timings: Mon–Sat 9 AM – 7 PM\n📞 Call: [Phone] |
-| `/emergency` | 🚨 EMERGENCY HELP\n\nAgar dard bahut zyada hai:\n1. Painkiller lein (Ibuprofen/Paracetamol — if not allergic)\n2. Cold compress lagaein\n3. Dr. [Name] ko call karein: 📞 [Emergency No.]\n\n⚠️ Yeh medical advice nahi hai. Please call karein. |
+| `/emergency` | 🚨 EMERGENCY HELP\n\nAgar dard bahut zyada hai:\n1. Cold compress lagaein (cloth mein ice)\n2. Kuch khane-peene se bachein abhi\n3. Dr. [Name] ko call karein: 📞 [Emergency No.]\n\n⚠️ Yeh medical advice nahi hai. Please turant doctor ko call karein. |
 | `/form` | Apni details share karein taaki hum better help kar sakein 😊\n🔗 [FORM SHORT LINK]\n(Official clinic form — aapki info safe hai 🔒)\nForm fill hone ke baad 1 ghante mein call/message aayega! |
 | `/confirm` | ✅ Aapka appointment confirm ho gaya!\n\n📅 Date: [DATE]\n⏰ Time: [TIME]\n📍 [Clinic Name], [Address]\n\nKuch change karna ho toh batayein. Reminder 1 din pehle aayega! 😊 |
 | `/remind` | 🔔 Reminder: Kal aapka appointment hai!\n\n📅 [DATE] ⏰ [TIME]\n📍 [CLINIC ADDRESS]\n\nPlease 10 min pehle aayen. Koi doubt ho toh batayein! 😊 |
@@ -283,13 +283,13 @@ Appointment ke liye: 1 type karein 😊
 🚨 Emergency samajh aa gayi! Pehle yeh karein:
 
 ✅ Step 1: Dard ki jagah pe cold compress (ice pack in cloth) lagaein — 10 min ke liye
-✅ Step 2: Painkiller lein: Ibuprofen 400mg ya Paracetamol 500mg (agar allergy nahi hai)
-✅ Step 3: Kuch bhi khane-peene se bachein abhi
+✅ Step 2: Kuch bhi khane-peene se bachein abhi
+✅ Step 3: Dr. [Name] Emergency Line pe call karein: 📞 [EMERGENCY NUMBER]
 
 📞 Dr. [Name] Emergency Line: [EMERGENCY NUMBER]
 (Available 9 AM – 8 PM, Mon–Sat)
 
-⚠️ DISCLAIMER: Yeh professional medical advice nahi hai. Please immediately doctor se milein ya call karein.
+⚠️ DISCLAIMER: Yeh sirf general first-aid guidance hai — professional medical advice nahi hai. Kisi bhi medicine lene se pehle apne doctor se poochein. Please immediately dentist se milein ya call karein.
 
 Kya aap call kar sakte hain abhi? Reply Y ya N 👇
 ```
@@ -757,7 +757,7 @@ Patient is angry → Apologize + escalate to manager
 
 | # | Question | Short Answer |
 |---|---|---|
-| 1 | Tooth mein dard hai — kya karein? | Cold compress, painkiller. Visit karo jaldi. RCT ya filling lag sakti hai. |
+| 1 | Tooth mein dard hai — kya karein? | Cold compress lagaein aur immediately clinic visit karein. Proper diagnosis ke liye dentist examination zaroori hai. |
 | 2 | Tooth nikaalna hai — kitna lagega? | ₹300–700 (simple). Complex case: ₹800–1500. Confirm for checkup. |
 | 3 | Tooth whitening safe hai? | Haan, professional whitening safe hai. Home kits risky ho sakti hain. |
 | 4 | Braces kitne time mein lagti hain? | 1–2 ghante for fitting. Total treatment 12–24 months. |
@@ -772,7 +772,7 @@ Patient is angry → Apologize + escalate to manager
 | 13 | X-ray safe hai? | Haan, dental X-ray radiation minimal hai — completely safe. |
 | 14 | Anesthesia injection mein bahut dard hota hai? | Modern technique mein minimal sensation. Don't worry! |
 | 15 | Treatment ke baad kya nahi khana chahiye? | 2 ghante kuch nahi. Hard/crunchy food avoid karein for 24h. |
-| 16 | Kya pregnant women ka dental treatment ho sakta hai? | Haan, 2nd trimester safe hai. Pehle doctor ko batayein. |
+| 16 | Kya pregnant women ka dental treatment ho sakta hai? | Pregnancy mein dental treatment ke liye pehle apne gynecologist aur dentist dono se milein — har case alag hota hai. |
 | 17 | Implants ka kya option hai? | Titanium implant — ₹25,000–40,000/tooth. Long-term best option. |
 | 18 | Veneers kya hote hain? | Thin shells on front teeth for cosmetic improvement. ₹8,000–15,000/tooth. |
 | 19 | Wisdom tooth problem — surgery lagegi? | Depends on position. X-ray se pata chalega. |
@@ -782,9 +782,9 @@ Patient is angry → Apologize + escalate to manager
 | 23 | Crown aur cap mein kya difference hai? | Same cheez hai — "cap" common Indian term hai crown ke liye. |
 | 24 | Filling ke kitne types hain? | Composite (white/tooth-coloured) — most common. Silver (amalgam) — less used now. |
 | 25 | Appointment cancel karne ke liye kya karna hai? | WhatsApp karo ya call karo 12 ghante pehle please. |
-| 26 | Insurance accept karte hain? | [Add clinic-specific answer here] |
-| 27 | EMI option hai? | [Add clinic-specific answer here] |
-| 28 | Home visit karte hain? | [Add clinic-specific answer here] |
+| 26 | Insurance accept karte hain? | Haan/Nahi — please clinic se directly confirm karein. Accepted insurers list ke liye call karein: 📞 [NUMBER] |
+| 27 | EMI option hai? | Haan/Nahi — clinic ke payment options ke liye receptionist se poochein: 📞 [NUMBER] |
+| 28 | Home visit karte hain? | Abhi home visits available nahi hain. Clinic mein aayen ya appointment lein: type karein 1 |
 | 29 | Same-day appointment milta hai? | Urgent cases mein haan. WhatsApp karo, dekhte hain. |
 | 30 | Review/feedback kahan dein? | Google pe review dein: [GOOGLE REVIEW LINK] — bahut appreciate karenge! 🙏 |
 
@@ -892,14 +892,14 @@ Aaj appointment lena hai? Type karein: 1 👇
 🚨 Emergency — Hum samajhte hain!
 
 Pehle yeh karein:
-✅ Cold pack lagaein (kapde mein ice)
-✅ Painkiller lein (Ibuprofen/Paracetamol)
+✅ Cold pack lagaein (kapde mein ice) — 10 min ke liye
 ✅ Kuch mat khaiye abhi
+✅ Immediately doctor ko call karein
 
 📞 Emergency Contact: [DR. NAME — NUMBER]
 Timing: 9 AM – 8 PM (Mon–Sat)
 
-⚠️ NOTE: Yeh sirf first-aid guidance hai — medical advice nahi. Please clinic call karein ya aayen!
+⚠️ NOTE: Yeh sirf general first-aid guidance hai — professional medical advice nahi. Koi bhi medicine lene se pehle apne doctor se poochein. Please clinic call karein ya turant aayen!
 
 Kya main aapke liye call arrange kar sakta/sakti hoon? Reply Y ya N 👇
 ```
@@ -1120,9 +1120,10 @@ Agar koi patient severe pain, swelling, breathing difficulty, ya major injury re
 - Patient data (form responses) sirf authorized staff ke paas hona chahiye
 - Google Sheet ka access: Sirf clinic email accounts ko share karein — NOT public
 - WhatsApp mein personally identifiable info (like medical history) ko forward mat karein
-- Old leads ko 6 months baad archive/delete karein from Sheet
+- Patient records India ke medical laws ke anusar retain karein (minimum 3 years, ya as advised by your legal/medical consultant). Data delete karne se pehle legal guidance lein.
 - Never share patient details with third parties
 - Form mein CONSENT checkbox mandatory rakhen
+- Data protection ke liye Google Workspace account use karein (free tier) — personal Gmail se better security milti hai
 
 ### Consent Message Before Form Capture
 
@@ -1196,7 +1197,7 @@ Final price examination ke baad hogi.
 ---
 
 [EMERGENCY]
-🚨 Cold compress lagaein. Painkiller lein. Call karein: 📞 [NUMBER]
+🚨 Cold compress lagaein. Doctor ko call karein: 📞 [NUMBER]
 ⚠️ Yeh medical advice nahi hai.
 
 ---
